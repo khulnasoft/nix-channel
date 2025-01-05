@@ -15,7 +15,9 @@ jobs:
         with:
           deno-version: v1.x
       - name: Run scripts
-        run: ./scripts/updateAll.sh
+        run: |
+          sudo chmod +x ./scripts/updateAll.sh
+          ./scripts/updateAll.sh
       - name: Commit
         uses: EndBug/add-and-commit@v9
         with:
